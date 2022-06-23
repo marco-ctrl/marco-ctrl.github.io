@@ -1,7 +1,7 @@
 :root {
     --main-white: #f0f0f0;
     --main-red: rgb(160, 9, 9);
-    --main-blue: rgb(16, 3, 48);
+    --main-blue: rgb(26, 52, 99);
     --main-grey: rgb(85, 82, 82);
 }
 
@@ -53,14 +53,14 @@ html {
 /* 980px / 16px = 61.25em */
 @media (max-width: 61.25em) {
     html {
-        font-size: 58%;
+        font-size: 50%;
     }
 }
 
 /* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
     html {
-        font-size: 55%;
+        font-size: 40%;
     }
 }
 
@@ -73,6 +73,16 @@ body {
     color: var(--main-white);
     background-color: black;
     margin: 0px;
+}
+
+body::-webkit-scrollbar{
+    width: 7px;
+    background-color: var(--main-grey);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: orange;
+    border-radius: 15px;
 }
 
 img {
@@ -134,7 +144,16 @@ a {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    /*background: url("image/fondo.png");
+    background-image: linear-gradient(62deg, #384552 0%, #141316 100%);*/
+    background: var(--main-gray);
+  background-image: linear-gradient(
+      115deg,rgba(113, 113, 116, 0.7), rgba(24, 24, 26, 0.8)
+    ),
+    url("image/fondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .content-welcome-section{
@@ -149,6 +168,7 @@ a {
 
 h1 {
     font-size: 6rem;
+    
 }
 
 h1,
@@ -158,6 +178,12 @@ h2 {
     text-align: center;
 }
 
+.img-perfil{
+    width: 25%;
+    height: auto;
+    border-radius: 50%;
+}
+
 .welcome-section>.content-welcome-section>p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 200;
@@ -165,6 +191,8 @@ h2 {
     font-style: italic;
     text-align: center;
     color: var(--main-red);
+    margin-top: 2rem;
+    /*text-shadow: 0.1em 0.1em 0.2em white*/
 }
 
 .projects-section {
@@ -181,10 +209,25 @@ h2 {
 
 }
 
+@media (max-width: 61.75em) {
+
+    .img-perfil{
+        width: 40%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    h1{
+        margin-bottom: 0.8em;
+    }
+}
+
 @media (max-width: 28.75em) {
     .projects-section-header {
         font-size: 4rem;
     }
+
+    
 }
 
 h2 {
@@ -208,6 +251,18 @@ h2 {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .img-perfil{
+        width: 50%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .welcome-section>.content-welcome-section>p{
+        margin-top: 0.8em;
+        padding-top: 0.8em;
+        width: 100%;
     }
 }
 
@@ -333,4 +388,6 @@ h2 {
       text-align: center;
     }
   }
+
+  
   
