@@ -1,6 +1,6 @@
 :root {
     --main-white: #f0f0f0;
-    --main-red: rgb(160, 9, 9);
+    --main-red: rgb(179, 49, 49);
     --main-blue: rgb(26, 52, 99);
     --main-grey: rgb(85, 82, 82);
 }
@@ -148,7 +148,7 @@ a {
     background-image: linear-gradient(62deg, #384552 0%, #141316 100%);*/
     background: var(--main-gray);
   background-image: linear-gradient(
-      115deg,rgba(113, 113, 116, 0.7), rgba(24, 24, 26, 0.8)
+      115deg,rgba(113, 113, 116, 0.7), rgba(23, 23, 65, 0.8)
     ),
     url("image/fondo.png");
   background-size: cover;
@@ -190,7 +190,7 @@ h2 {
     font-size: 3rem;
     font-style: italic;
     text-align: center;
-    color: var(--main-red);
+    color: var(--main-white);
     margin-top: 2rem;
     /*text-shadow: 0.1em 0.1em 0.2em white*/
 }
